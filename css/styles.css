@@ -1,1 +1,91 @@
+/* General styles */
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+}
+
+header { 
+  background: #003366; 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Hero section */
+.hero { 
+  background: url('../images/hero-marina.png') no-repeat center/cover; 
+  height: 300px; 
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+/* Gallery Carousel */
+.gallery-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Contact section */
+#contact {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
