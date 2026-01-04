@@ -27,10 +27,7 @@ header {
   gap: 15px;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
-}
+.logo { width: 150px; height: auto; }
 
 /* Navigation menu */
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
@@ -80,5 +77,5 @@ nav a:hover { color: #66ccff; }
 .carousel-btn.next { right: 10px; }
 
 /* Contact & Footer */
-#contact { padding: 30px 20px; text-align: center; }
+#contact { padding: 40px 20px; text-align: center; }
 footer { background: #003366; color: white; text-align: center; padding: 15px; }
