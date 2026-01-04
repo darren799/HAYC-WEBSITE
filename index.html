@@ -22,6 +22,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#membership">Membership</a></li>
+          <li><a href="#join">Join</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -29,7 +30,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Fade-in Gradient Overlay -->
+  <!-- Hero Section with Fade-in Overlay -->
   <section id="home" class="hero" style="background-image: url('images/hero-marina.png');">
     <div class="hero-text">
       <h2>Welcome to Holly Acres Yacht Club</h2>
@@ -58,7 +59,6 @@
     <p>As a member of Holly Acres Yacht Club, you’ll enjoy an exciting mix of <strong>exclusive perks, savings, and experiences</strong>.</p>
 
     <div class="membership-content">
-
       <h3>⚓ Exclusive Member Benefits</h3>
 
       <h4>💰 Financial Perks</h4>
@@ -97,11 +97,38 @@
     </div>
   </section>
 
+  <!-- Join Now / Signup Form Section -->
+  <section id="join">
+    <h2>Join Holly Acres Yacht Club</h2>
+    <p>Ready to become part of our boating family? Fill out the form below, and we’ll be in touch soon!</p>
+
+    <form action="https://formsubmit.co/HAYCNVA@gmail.com" method="POST" class="signup-form">
+      <!-- Configuration -->
+      <input type="hidden" name="_subject" value="HAYC Membership Signup Request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Name" placeholder="Your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" placeholder="Your email address" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="Phone" placeholder="Your phone number">
+
+      <label for="message">Message or Questions</label>
+      <textarea id="message" name="Message" rows="4" placeholder="Tell us a bit about your boating interests..."></textarea>
+
+      <button type="submit">Join Now</button>
+    </form>
+  </section>
+
   <!-- Events Section -->
   <section id="events">
     <h2>Upcoming Events</h2>
     <div class="events-content">
-
       <div class="event-card">
         <h3>Fredericksburg Boat Show</h3>
         <p><strong>Dates:</strong> January 9–11, 2026</p>
@@ -121,7 +148,6 @@
         <p>Set sail for a scenic brunch cruise on the Occoquan River — a signature event hosted  
         <strong>in partnership with the DMV Boat Owners Association</strong>.</p>
       </div>
-
     </div>
   </section>
 
