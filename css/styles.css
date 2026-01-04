@@ -1,360 +1,70 @@
 /* ==============================
-   GLOBAL BASE STYLES
+   SIGNUP FORM SECTION
 ============================== */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #fff;
-}
-
-/* ==============================
-   HEADER + NAVIGATION
-============================== */
-header {
-  background: #003366;
-  color: white;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  user-select: none;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #66ccff;
-}
-
-/* Responsive Navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  nav {
-    width: 100%;
-    display: none;
-    background: #003366;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0;
-    gap: 10px;
-  }
-}
-
-/* ==============================
-   HERO SECTION (with Fade-in)
-============================== */
-.hero {
-  position: relative;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  animation: fadeInHero 2s ease-in-out; /* Fade-in animation */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
-  z-index: 1;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 20px 25px;
-  border-radius: 8px;
-  max-width: 90%;
-  margin: auto;
-  opacity: 0;
-  animation: fadeInText 2s 0.5s forwards;
-}
-
-/* Keyframes for fade-in */
-@keyframes fadeInHero {
-  from { opacity: 0; transform: scale(1.05); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeInText {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==============================
-   GALLERY SECTION
-============================== */
-#gallery {
-  padding: 40px 20px;
+#join {
+  padding: 60px 20px;
+  background: #f0f8ff;
   text-align: center;
 }
 
-#gallery h2 {
-  color: #003366;
-}
-
-.gallery-carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 20px auto;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-@media (max-width: 768px) {
-  .carousel-item {
-    max-height: 250px;
-  }
-}
-
-/* Carousel Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 6px;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-/* ==============================
-   MEMBERSHIP SECTION
-============================== */
-#membership {
-  padding: 50px 20px;
-  background: #f4f7fa;
-  text-align: center;
-}
-
-#membership h2 {
+#join h2 {
   color: #003366;
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-#membership p {
-  max-width: 800px;
+#join p {
+  max-width: 700px;
   margin: 0 auto 30px;
-  line-height: 1.6;
   color: #333;
 }
 
-.membership-content {
-  text-align: left;
-  max-width: 900px;
+.signup-form {
+  max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.membership-content h3 {
-  color: #003366;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.membership-content h4 {
-  color: #0066cc;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.membership-content ul {
-  list-style: none;
-  padding-left: 15px;
-  margin-bottom: 10px;
-}
-
-.membership-content ul li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  position: relative;
-}
-
-.membership-content ul li::before {
-  content: "•";
-  color: #0066cc;
+.signup-form label {
   font-weight: bold;
-  margin-right: 6px;
-}
-
-.membership-content .closing {
-  margin-top: 25px;
-  text-align: center;
-  font-style: italic;
-}
-
-/* ==============================
-   EVENTS SECTION
-============================== */
-#events {
-  padding: 50px 20px;
-  background: #e6f2ff;
-  text-align: center;
-}
-
-#events h2 {
-  color: #003366;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.events-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.event-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.event-card h3 {
-  color: #0066cc;
-  margin-bottom: 10px;
-}
-
-.event-card p {
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .events-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .event-card {
-    max-width: 90%;
-  }
-}
-
-/* ==============================
-   CONTACT SECTION
-============================== */
-#contact {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-#contact h2 {
   color: #003366;
 }
 
-#contact a {
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: bold;
+.signup-form input,
+.signup-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.signup-form input:focus,
+.signup-form textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 4px rgba(0,102,204,0.4);
 }
 
-/* ==============================
-   FOOTER
-============================== */
-footer {
+.signup-form button {
   background: #003366;
   color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.signup-form button:hover {
+  background: #0055aa;
 }
