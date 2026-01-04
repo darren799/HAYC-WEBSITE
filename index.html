@@ -22,16 +22,15 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#membership">Membership</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#join">Join</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section with Gradient Overlay -->
-  <section id="home" class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
+  <!-- Hero Section with Overlay -->
+  <section id="home" class="hero">
+    <div class="hero-text fade-in">
       <h2>Welcome to Holly Acres Yacht Club</h2>
       <p>Your home on the Occoquan River — where boating becomes a lifestyle of friendship, adventure, and community.</p>
     </div>
@@ -42,10 +41,10 @@
     <h2>Photo Gallery</h2>
     <div class="gallery-carousel">
       <div class="carousel-track">
-        <img src="images/gallery-1.png" class="carousel-item" alt="Gallery 1">
-        <img src="images/gallery-2.png" class="carousel-item" alt="Gallery 2">
-        <img src="images/gallery-3.png" class="carousel-item" alt="Gallery 3">
-        <img src="images/gallery-4.png" class="carousel-item" alt="Gallery 4">
+        <div class="gallery-placeholder">Gallery 1</div>
+        <div class="gallery-placeholder">Gallery 2</div>
+        <div class="gallery-placeholder">Gallery 3</div>
+        <div class="gallery-placeholder">Gallery 4</div>
       </div>
       <button class="carousel-btn prev">&lt;</button>
       <button class="carousel-btn next">&gt;</button>
@@ -57,7 +56,8 @@
     <h2>Membership Benefits</h2>
     <p>As a member of Holly Acres Yacht Club, you’ll enjoy an exciting mix of <strong>exclusive perks, savings, and experiences</strong>.</p>
 
-    <div class="membership-content">
+    <div class="membership-content fade-in">
+
       <h3>⚓ Exclusive Member Benefits</h3>
 
       <h4>💰 Financial Perks</h4>
@@ -80,7 +80,7 @@
         <li><strong>Free and discounted tickets</strong> to regional and national boat shows</li>
         <li><strong>Ongoing social events</strong> — dock parties, cookouts, themed gatherings</li>
         <li><strong>Collaboration</strong> with other yacht clubs</li>
-        <li><strong>Raft-ups, day trips, and overnight adventures</strong></li>
+        <li><strong>Raft-ups, day trips, and overnight adventures</li>
         <li><strong>Annual Family Day</strong> celebration</li>
       </ul>
 
@@ -91,6 +91,7 @@
         <li><strong>Special recognition</strong> for longtime and active members</li>
         <li><strong>Birthday shoutouts</strong> and <strong>member spotlights</strong></li>
       </ul>
+
       <p class="closing">At Holly Acres Yacht Club, we’re more than just a marina — we’re a <strong>community of boaters who celebrate life on the water together</strong>.</p>
     </div>
   </section>
@@ -98,11 +99,12 @@
   <!-- Events Section -->
   <section id="events">
     <h2>Upcoming Events</h2>
-    <div class="events-content">
+    <div class="events-content fade-in">
+
       <div class="event-card">
         <h3>Fredericksburg Boat Show</h3>
         <p><strong>Dates:</strong> January 9–11, 2026</p>
-        <p>Join us for the premier <strong>Fredericksburg Boat Show</strong> — explore the latest boats, gear, and local vendors.</p>
+        <p>Join us for the premier <strong>Fredericksburg Boat Show</strong> — explore the latest boats, gear, and local vendors. Fun for the whole family!</p>
       </div>
 
       <div class="event-card">
@@ -115,45 +117,17 @@
       <div class="event-card">
         <h3>DMVBOA April Brunch Cruise</h3>
         <p><strong>Date:</strong> April 18, 2026</p>
-        <p>Set sail for a scenic brunch cruise on the Occoquan River — hosted  
+        <p>Set sail for a scenic brunch cruise on the Occoquan River — a signature event hosted  
         <strong>in partnership with the DMV Boat Owners Association</strong>.</p>
       </div>
+
     </div>
-  </section>
-
-  <!-- Join / Signup Form Section -->
-  <section id="join">
-    <h2>Join Holly Acres Yacht Club</h2>
-    <p>Ready to become part of our boating family? Fill out the form below!</p>
-
-    <form action="https://formsubmit.co/HAYCNVA@gmail.com" method="POST" class="signup-form">
-      <input type="hidden" name="_subject" value="HAYC Membership Signup Request">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
-      <input type="hidden" name="_autoresponse" value="Thank you for joining Holly Acres Yacht Club! We’ve received your membership request and will contact you soon with event details and next steps. Welcome aboard!">
-      <input type="hidden" name="_replyto" value="HAYCNVA@gmail.com">
-
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="Name" placeholder="Your full name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="Email" placeholder="Your email address" required>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="Phone" placeholder="Your phone number">
-
-      <label for="message">Message or Questions</label>
-      <textarea id="message" name="Message" rows="4" placeholder="Tell us about your boating interests..."></textarea>
-
-      <button type="submit">Join Now</button>
-    </form>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:HAYCNVA@gmail.com">HAYCNVA@gmail.com</a></p>
+    <p>Email: <a href="mailto:HAYC@gmail.com">HAYC@gmail.com</a></p>
     <p>Phone: 703-401-9807</p>
   </section>
 
