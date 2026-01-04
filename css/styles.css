@@ -1,163 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Holly Acres Yacht Club</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+/* Basic Styles */
+html { scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; }
 
-  <!-- Header + Navigation -->
-  <header>
-    <div class="nav-container">
-      <div class="logo-container">
-        <img src="images/logo.png" alt="HAYC Logo" class="logo">
-        <h1>Holly Acres Yacht Club</h1>
-      </div>
-      <span class="hamburger">&#9776;</span>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#membership">Membership</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#signup">Sign Up</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* Header + Navigation */
+header { background:#003366; color:white; padding:10px 20px; position:sticky; top:0; z-index:1000; }
+.nav-container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.logo-container { display:flex; align-items:center; gap:10px; }
+.logo { width:60px; height:60px; }
 
-  <!-- Hero Section with Gradient Overlay -->
-  <section id="home" class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
-      <h2>Welcome to Holly Acres Yacht Club</h2>
-      <p>Your home on the Occoquan River — where boating becomes a lifestyle of friendship, adventure, and community.</p>
-    </div>
-  </section>
+/* Navigation Menu */
+nav ul { list-style:none; margin:0; padding:0; display:flex; gap:20px; }
+nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
+nav a:hover { color:#66ccff; }
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="gallery-carousel">
-      <div class="carousel-track">
-        <img src="images/gallery-1.png" class="carousel-item" alt="Gallery 1">
-        <img src="images/gallery-2.png" class="carousel-item" alt="Gallery 2">
-        <img src="images/gallery-3.png" class="carousel-item" alt="Gallery 3">
-        <img src="images/gallery-4.png" class="carousel-item" alt="Gallery 4">
-      </div>
-      <button class="carousel-btn prev">&lt;</button>
-      <button class="carousel-btn next">&gt;</button>
-    </div>
-  </section>
+/* Hamburger Menu */
+.hamburger { display:none; font-size:28px; cursor:pointer; }
+@media(max-width:768px) {
+  .hamburger { display:block; }
+  nav { width:100%; display:none; background:#003366; }
+  nav.active { display:block; }
+  nav ul { flex-direction:column; text-align:center; padding:10px 0; gap:10px; }
+}
 
-  <!-- Membership Section -->
-  <section id="membership">
-    <h2>Membership Benefits</h2>
-    <p>As a member of Holly Acres Yacht Club, you’ll enjoy an exciting mix of <strong>exclusive perks, savings, and experiences</strong>.</p>
-    <div class="membership-content">
+/* Hero Section + Overlay */
+.hero {
+  position:relative;
+  height:320px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  background-size:cover;
+  background-position:center;
+}
 
-      <h3>⚓ Exclusive Member Benefits</h3>
+.hero::after {
+  content:'';
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.4);
+  z-index:1;
+}
 
-      <h4>💰 Financial Perks</h4>
-      <ul>
-        <li><strong>30% discount</strong> on covered slips at <strong>Holly Acres Marine</strong> for your first year</li>
-        <li><strong>Discounts</strong> on Freedom Boat Club Northern VA Membership</li>
-        <li><strong>Discount</strong> on Argo Navigation Membership</li>
-        <li><strong>Discounts</strong> on custom DMVBOA T-shirts and gear</li>
-      </ul>
+.hero-text { position:relative; z-index:2; }
 
-      <h4>🎓 Education & Training</h4>
-      <ul>
-        <li><strong>Free and discounted trainings</strong> on boating and safety</li>
-        <li>Access to <strong>expert-led sessions</strong> on navigation, seamanship, and safety</li>
-      </ul>
+/* Gallery Carousel */
+.gallery-carousel { position:relative; overflow:hidden; max-width:100%; margin:20px auto; }
+.carousel-track { display:flex; transition:transform 0.5s ease-in-out; }
+.carousel-item { min-width:100%; height:200px; object-fit:cover; }
+.carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:white; font-size:2rem; padding:0 10px; cursor:pointer; z-index:10; }
+.carousel-btn.prev { left:10px; }
+.carousel-btn.next { right:10px; }
 
-      <h4>🎉 Events & Community</h4>
-      <ul>
-        <li><strong>Discounted and free entry</strong> to Association and partner events</li>
-        <li><strong>Free and discounted tickets</strong> to regional and national boat shows</li>
-        <li><strong>Ongoing social events</strong> — dock parties, cookouts, themed gatherings</li>
-        <li><strong>Collaboration</strong> with other yacht clubs</li>
-        <li><strong>Raft-ups, day trips, and overnight adventures</strong></li>
-        <li><strong>Annual Family Day</strong> celebration</li>
-      </ul>
+/* Membership & Events */
+.membership-content, .events-content { padding:20px; }
+.membership-content ul, .events-content ul { list-style: disc; margin-left:20px; }
 
-      <h4>💎 Member Appreciation & Recognition</h4>
-      <ul>
-        <li><strong>Member appreciation giveaways</strong> and surprise gifts</li>
-        <li><strong>Exclusive member-only raffles</strong></li>
-        <li><strong>Special recognition</strong> for longtime and active members</li>
-        <li><strong>Birthday shoutouts</strong> and <strong>member spotlights</strong></li>
-      </ul>
+/* Signup Form */
+form { display:flex; flex-direction:column; gap:10px; max-width:400px; margin:auto; }
+form input, form textarea { padding:10px; font-size:1rem; width:100%; }
+form button { padding:10px; font-size:1rem; background:#003366; color:white; border:none; cursor:pointer; }
+form button:hover { background:#0066cc; }
 
-      <p class="closing">At Holly Acres Yacht Club, we’re more than just a marina — we’re a <strong>community of boaters who celebrate life on the water together</strong>.</p>
-    </div>
-  </section>
+/* Contact & Footer */
+#contact { padding:20px; text-align:center; }
+footer { background:#003366; color:white; text-align:center; padding:10px; }
 
-  <!-- Events Section -->
-  <section id="events">
-    <h2>Upcoming Events</h2>
-    <div class="events-content">
-
-      <div class="event-card">
-        <h3>Fredericksburg Boat Show</h3>
-        <p><strong>Dates:</strong> January 9–11, 2026</p>
-        <p>Join us for the premier <strong>Fredericksburg Boat Show</strong> — explore the latest boats, gear, and local vendors. Fun for the whole family!</p>
-      </div>
-
-      <div class="event-card">
-        <h3>DMVBOA Kickoff Brunch</h3>
-        <p><strong>Date:</strong> January 17, 2026</p>
-        <p>Start the year with friends, brunch, and boating excitement at Holly Acres Marina.  
-        <strong>In partnership with the DMV Boat Owners Association</strong>.</p>
-      </div>
-
-      <div class="event-card">
-        <h3>DMVBOA April Brunch Cruise</h3>
-        <p><strong>Date:</strong> April 18, 2026</p>
-        <p>Set sail for a scenic brunch cruise on the Occoquan River — a signature event hosted  
-        <strong>in partnership with the DMV Boat Owners Association</strong>.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Signup Form Section -->
-  <section id="signup" class="fade-in">
-    <h2>Join Our Mailing List</h2>
-    <p>Stay updated on events, news, and exclusive HAYC offers!</p>
-
-    <form id="signup-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Your name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com">
-
-      <!-- Hidden fields for customization -->
-      <input type="hidden" name="_subject" value="New HAYC Signup">
-      <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
-      <input type="hidden" name="_cc" value="haycnva@gmail.com">
-
-      <button type="submit">Sign Up</button>
-    </form>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:HAYC@gmail.com">HAYC@gmail.com</a></p>
-    <p>Phone: 703-401-9807</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Holly Acres Yacht Club</p>
-  </footer>
-
-  <!-- JS -->
-  <script src="js/script.js"></script>
-</body>
-</html>
+/* Fade-in animation */
+section { opacity:0; animation:fadeIn 1s ease forwards; }
+@keyframes fadeIn { to { opacity:1; } }
