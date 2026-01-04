@@ -2,7 +2,6 @@ const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const nextBtn = document.querySelector('.carousel-btn.next');
 const prevBtn = document.querySelector('.carousel-btn.prev');
-
 let currentIndex = 0;
 
 function updateCarousel() {
@@ -20,14 +19,10 @@ prevBtn.addEventListener('click', () => {
   updateCarousel();
 });
 
-// Auto-slide every 5 seconds
 setInterval(() => {
   currentIndex = (currentIndex + 1) % slides.length;
   updateCarousel();
 }, 5000);
 
-// Adjust carousel on window resize
 window.addEventListener('resize', updateCarousel);
-
-// Initialize
 updateCarousel();
