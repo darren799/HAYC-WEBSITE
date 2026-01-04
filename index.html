@@ -29,8 +29,8 @@
     </div>
   </header>
 
-  <!-- Hero Section with Gradient Overlay -->
-  <section id="home" class="hero" style="background-image: url('images/hero-marina.png');">
+  <!-- Hero Section with Overlay -->
+  <section id="home" class="hero">
     <div class="hero-text">
       <h2>Welcome to Holly Acres Yacht Club</h2>
       <p>Your home on the Occoquan River — where boating becomes a lifestyle of friendship, adventure, and community.</p>
@@ -56,8 +56,8 @@
   <section id="membership">
     <h2>Membership Benefits</h2>
     <p>As a member of Holly Acres Yacht Club, you’ll enjoy an exciting mix of <strong>exclusive perks, savings, and experiences</strong>.</p>
-    <div class="membership-content">
 
+    <div class="membership-content">
       <h3>⚓ Exclusive Member Benefits</h3>
 
       <h4>💰 Financial Perks</h4>
@@ -100,17 +100,16 @@
   <section id="events">
     <h2>Upcoming Events</h2>
     <div class="events-content">
-
       <div class="event-card">
         <h3>Fredericksburg Boat Show</h3>
         <p><strong>Dates:</strong> January 9–11, 2026</p>
-        <p>Join us for the premier <strong>Fredericksburg Boat Show</strong> — explore the latest boats, gear, and local vendors. Fun for the whole family!</p>
+        <p>Explore the latest boats, gear, and local vendors. Fun for the whole family!</p>
       </div>
 
       <div class="event-card">
         <h3>DMVBOA Kickoff Brunch</h3>
         <p><strong>Date:</strong> January 17, 2026</p>
-        <p>Start the year with friends, brunch, and boating excitement at Holly Acres Marina.  
+        <p>Start the year with friends, brunch, and boating excitement.  
         <strong>In partnership with the DMV Boat Owners Association</strong>.</p>
       </div>
 
@@ -120,35 +119,28 @@
         <p>Set sail for a scenic brunch cruise on the Occoquan River — a signature event hosted  
         <strong>in partnership with the DMV Boat Owners Association</strong>.</p>
       </div>
-
     </div>
   </section>
 
   <!-- Signup Form Section -->
-  <section id="signup" class="fade-in">
-    <h2>Join Our Mailing List</h2>
-    <p>Stay updated on events, news, and exclusive HAYC offers!</p>
-
-    <form id="signup-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Your name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com">
-
-      <!-- Hidden fields for customization -->
+  <section id="signup">
+    <h2>Sign Up for Updates</h2>
+    <p>Join our mailing list to stay updated on events and membership perks!</p>
+    <form id="signup-form" class="fade-in" action="https://formsubmit.co/haycnva@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New HAYC Signup">
-      <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
-      <input type="hidden" name="_cc" value="haycnva@gmail.com">
-
-      <button type="submit">Sign Up</button>
+      <input type="hidden" name="_autoresponse" value="Thank you for signing up! We'll be in touch soon.">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+      <button type="submit">Join Now</button>
     </form>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:HAYC@gmail.com">HAYC@gmail.com</a></p>
+    <p>Email: <a href="mailto:haycnva@gmail.com">haycnva@gmail.com</a></p>
     <p>Phone: 703-401-9807</p>
   </section>
 
