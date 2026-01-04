@@ -1,64 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Holly Acres Yacht Club</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+html {
+  scroll-behavior: smooth;
+}
 
-  <!-- Header + Navigation -->
-  <header>
-    <div class="nav-container">
-      <div class="logo-container">
-        <div class="logo-placeholder">HAYC</div>
-        <h1>Holly Acres Yacht Club</h1>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Welcome to Holly Acres Yacht Club</h2>
-      <p>Experience boating, adventure, and community at Holly Acres Marina.</p>
-    </div>
-  </section>
+/* Header + Navigation */
+header {
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="gallery-carousel">
-      <div class="carousel-track">
-        <div class="gallery-placeholder">Gallery Image 1</div>
-        <div class="gallery-placeholder">Gallery Image 2</div>
-        <div class="gallery-placeholder">Gallery Image 3</div>
-      </div>
-      <button class="carousel-btn prev">&lt;</button>
-      <button class="carousel-btn next">&gt;</button>
-    </div>
-  </section>
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:HAYC@gmail.com">HAYC@gmail.com</a></p>
-    <p>Phone: 703-401-9807</p>
-  </section>
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Holly Acres Yacht Club</p>
-  </footer>
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: white;
+  color: #003366;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #66ccff;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+    background-color: #003366;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    gap: 10px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom right, #0066cc, #0099ff);
+  color: white;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Gallery Carousel */
+.gallery-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-placeholder {
+  min-width: 100%;
+  height: 200px;
+  background: #ccc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #999;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Contact & Footer */
+#contact {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
