@@ -1,15 +1,15 @@
-/* General styles */
-body { 
-  font-family: Arial, sans-serif; 
-  margin: 0; 
-  padding: 0; 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header { 
-  background: #003366; 
-  color: white; 
-  padding: 20px; 
-  text-align: center; 
+/* Header */
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .logo-container {
@@ -19,20 +19,27 @@ header {
   gap: 15px;
 }
 
-.logo {
+.logo-placeholder {
   width: 80px;
-  height: auto;
+  height: 80px;
+  background: white;
+  color: #003366;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Hero section */
-.hero { 
-  background: url('../images/hero-marina.png') no-repeat center/cover; 
-  height: 300px; 
-  color: white; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom right, #0066cc, #0099ff);
+  color: white;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Gallery Carousel */
@@ -48,17 +55,23 @@ header {
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.gallery-placeholder {
   min-width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 200px;
+  background: #ccc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #999;
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
   font-size: 2rem;
@@ -67,25 +80,18 @@ header {
   z-index: 10;
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
-.carousel-btn.next {
-  right: 10px;
-}
-
-/* Contact section */
+/* Contact & Footer */
 #contact {
   padding: 20px;
   text-align: center;
 }
 
-/* Footer */
 footer {
   background: #003366;
   color: white;
   text-align: center;
   padding: 10px;
 }
-
