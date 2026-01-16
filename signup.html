@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Holly Acres Yacht Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header + Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="HAYC Logo" class="logo">
+        <h1>Holly Acres Yacht Club</h1>
+      </div>
+      <span class="hamburger">&#9776;</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="signup.html" class="active">Signup</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="https://richardproductionsllc.myshopify.com/collections/hayc" target="_blank">
+              Store
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Signup Hero -->
+  <section class="hero" style="background-image: url('images/hero-marina.png');">
+    <div class="hero-text">
+      <h2>Join the Holly Acres Yacht Club</h2>
+      <p>
+        Become part of a growing boating community built on connection,
+        adventure, and shared experiences on the Occoquan River.
+      </p>
+    </div>
+  </section>
+
+  <!-- Signup Intro -->
+  <section class="signup-intro">
+    <p>
+      Holly Acres Yacht Club is in an exciting growth phase, and now is the
+      perfect time to join. Membership offers exclusive benefits, access to
+      events, and opportunities to take on leadership roles as the club
+      continues to expand.
+    </p>
+    <p>
+      Annual membership dues are <strong>$100</strong>. Complete the form
+      below to express your interest, and a member of our team will contact
+      you directly with next steps.
+    </p>
+  </section>
+
+  <!-- Signup Form -->
+  <section class="signup-form">
+    <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+      >
+
+      <textarea
+        name="message"
+        placeholder="Tell us a little about your boating experience or interest in joining (optional)"
+      ></textarea>
+
+      <button type="submit" class="btn primary">
+        Submit Interest
+      </button>
+    </form>
+  </section>
+
+  <!-- Signup CTA -->
+  <section class="signup-cta">
+    <h3>Why Join Now?</h3>
+    <ul>
+      <li>Be part of a growing yacht club from the ground up</li>
+      <li>Access exclusive member benefits and discounts</li>
+      <li>Enjoy social, educational, and on-the-water events</li>
+      <li>Opportunities for leadership and involvement</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Holly Acres Yacht Club</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
 
