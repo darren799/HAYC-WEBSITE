@@ -60,35 +60,39 @@
     </p>
   </section>
 
-  <!-- Signup Form -->
-  <section class="signup-form">
-    <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
+ <!-- Signup Form -->
+<section class="signup-form">
+  <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Full Name"
-        required
-      >
+    <!-- ADD THIS LINE -->
+    <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-      >
+    <input
+      type="text"
+      name="name"
+      placeholder="Full Name"
+      required
+    >
 
-      <textarea
-        name="message"
-        placeholder="Tell us a little about your boating experience or interest in joining (optional)"
-      ></textarea>
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+    >
 
-      <button type="submit" class="btn primary">
-        Submit Interest
-      </button>
-    </form>
-  </section>
+    <textarea
+      name="message"
+      placeholder="Tell us a little about your boating experience or interest in joining (optional)"
+    ></textarea>
+
+    <button type="submit" class="btn primary">
+      Submit Interest
+    </button>
+  </form>
+</section>
+
 
   <!-- Signup CTA -->
   <section class="signup-cta">
