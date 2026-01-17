@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBNFFM16M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0MBNFFM16M');
+  </script>
+
   <title>Gallery | Holly Acres Yacht Club</title>
+  <meta name="description" content="View photos from events, gatherings, and life on the water at Holly Acres Yacht Club on the Occoquan River.">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +27,7 @@
         <img src="images/logo.png" alt="HAYC Logo" class="logo">
         <h1>Holly Acres Yacht Club</h1>
       </div>
-      <span class="hamburger">&#9776;</span>
+      <span class="hamburger" aria-label="Open navigation menu">&#9776;</span>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -36,63 +48,60 @@
 
   <!-- Gallery Hero -->
   <section class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
+    <div class="hero-text fade-in">
       <h2>Photo Gallery</h2>
       <p>
-        Moments from the marina, our events, and unforgettable days on the
-        Occoquan River.
+        A glimpse into life at Holly Acres Yacht Club — on the water,
+        at the dock, and among friends.
       </p>
     </div>
   </section>
 
   <!-- Gallery Intro -->
-  <section class="gallery-intro">
+  <section class="gallery-intro fade-in">
     <p>
-      Explore highlights from Holly Acres Yacht Club gatherings, cruising
-      adventures, and life on the water. Check back often as we continue to
-      add new photos from events and member experiences.
+      From dockside gatherings and group cruises to quiet moments on the river,
+      our gallery captures the spirit, camaraderie, and lifestyle that make
+      Holly Acres Yacht Club special.
     </p>
   </section>
 
   <!-- Gallery Carousel -->
-  <section class="gallery-section">
+  <section class="gallery-section slide-up">
     <div class="gallery-carousel">
       <div class="carousel-track">
+
         <div class="carousel-item-container">
-          <img src="images/gallery-1.png" class="carousel-item" alt="HAYC marina view">
+          <img src="images/gallery-1.png" class="carousel-item" alt="HAYC marina and boats">
         </div>
+
         <div class="carousel-item-container">
-          <img src="images/gallery-2.png" class="carousel-item" alt="HAYC boats docked">
+          <img src="images/gallery-2.png" class="carousel-item" alt="Members enjoying time on the water">
         </div>
+
         <div class="carousel-item-container">
-          <img src="images/gallery-3.png" class="carousel-item" alt="HAYC social event">
+          <img src="images/gallery-3.png" class="carousel-item" alt="Dockside gathering at Holly Acres">
         </div>
+
         <div class="carousel-item-container">
-          <img src="images/gallery-4.png" class="carousel-item" alt="HAYC on-the-water fun">
+          <img src="images/gallery-4.png" class="carousel-item" alt="Sunset view at the marina">
         </div>
+
       </div>
 
-      <button class="carousel-btn prev">&lt;</button>
-      <button class="carousel-btn next">&gt;</button>
+      <button class="carousel-btn prev" aria-label="Previous image">&lt;</button>
+      <button class="carousel-btn next" aria-label="Next image">&gt;</button>
     </div>
   </section>
 
-  <!-- Optional Gallery Grid (Future Expansion) -->
-  <section class="gallery-grid">
-    <h3>More Moments</h3>
-    <p>
-      Additional photos from events, cruises, and member experiences will be
-      added throughout the season.
-    </p>
-  </section>
-
   <!-- Gallery CTA -->
-  <section class="gallery-cta">
-    <h2>Want to Be Part of the Next Photo?</h2>
+  <section class="gallery-cta fade-in">
+    <h2>Experience It for Yourself</h2>
     <p>
-      Join the Holly Acres Yacht Club and start making memories on the water.
+      Photos tell part of the story — being here tells the rest.
+      Join Holly Acres Yacht Club and become part of the experience.
     </p>
-    <a href="signup.html" class="btn primary">Join the Club</a>
+    <a href="signup.html" class="btn primary">Apply to Join</a>
   </section>
 
   <!-- Footer -->
@@ -104,4 +113,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
