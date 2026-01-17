@@ -361,3 +361,26 @@ p {
 p:last-child {
   margin-bottom: 0;
 }
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.home-intro,
+.membership-content,
+.events-content,
+.contact-info,
+.signup-intro {
+  text-align: left;
+}
+
+.home-intro h2,
+.home-highlights h2,
+.home-cta h2 {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
