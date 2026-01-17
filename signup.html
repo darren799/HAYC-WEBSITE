@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | Holly Acres Yacht Club</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBNFFM16M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0MBNFFM16M');
+  </script>
+
+  <title>Signup | Holly Acres Yacht Club</title>
+  <meta name="description" content="Express your interest in joining Holly Acres Yacht Club and become part of a welcoming boating community on the Occoquan River.">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +27,7 @@
         <img src="images/logo.png" alt="HAYC Logo" class="logo">
         <h1>Holly Acres Yacht Club</h1>
       </div>
-      <span class="hamburger">&#9776;</span>
+      <span class="hamburger" aria-label="Open navigation menu">&#9776;</span>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -36,73 +48,63 @@
 
   <!-- Signup Hero -->
   <section class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
-      <h2>Join the Holly Acres Yacht Club</h2>
+    <div class="hero-text fade-in">
+      <h2>Join Holly Acres Yacht Club</h2>
       <p>
-        Become part of a growing boating community built on connection,
-        adventure, and shared experiences on the Occoquan River.
+        Take the first step toward becoming part of a friendly, growing boating
+        community on the Occoquan River.
       </p>
     </div>
   </section>
 
   <!-- Signup Intro -->
-  <section class="signup-intro">
+  <section class="signup-intro fade-in">
+    <h2>Membership Interest Form</h2>
     <p>
-      Holly Acres Yacht Club is in an exciting growth phase, and now is the
-      perfect time to join. Membership offers exclusive benefits, access to
-      events, and opportunities to take on leadership roles as the club
-      continues to expand.
-    </p>
-    <p>
-      Annual membership dues are <strong>$100</strong>. Complete the form
-      below to express your interest, and a member of our team will contact
-      you directly with next steps.
+      Whether you’re an experienced boater or simply looking for a more social
+      marina experience, we’d love to hear from you. Complete the form below and
+      a member of our team will be in touch.
     </p>
   </section>
 
- <!-- Signup Form -->
-<section class="signup-form">
-  <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
+  <!-- Signup Form -->
+  <section class="signup-form slide-up">
+    <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
 
-    <!-- ADD THIS LINE -->
-    <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
+      <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
+      <input type="hidden" name="_next" value="https://haycva.org/thank-you.html">
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Full Name"
-      required
-    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+      >
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Email Address"
-      required
-    >
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+      >
 
-    <textarea
-      name="message"
-      placeholder="Tell us a little about your boating experience or interest in joining (optional)"
-    ></textarea>
+      <textarea
+        name="message"
+        placeholder="Tell us a little about your boating experience or interest in joining (optional)"
+      ></textarea>
 
-    <button type="submit" class="btn primary">
-      Submit Interest
-    </button>
-  </form>
-</section>
-
+      <button type="submit" class="btn primary">
+        Submit Interest
+      </button>
+    </form>
+  </section>
 
   <!-- Signup CTA -->
-  <section class="signup-cta">
-    <h3>Why Join Now?</h3>
-    <ul>
-      <li>Be part of a growing yacht club from the ground up</li>
-      <li>Access exclusive member benefits and discounts</li>
-      <li>Enjoy social, educational, and on-the-water events</li>
-      <li>Opportunities for leadership and involvement</li>
-    </ul>
+  <section class="signup-cta fade-in">
+    <p>
+      Membership is currently open, and this is a great time to get involved
+      while the club continues to grow.
+    </p>
   </section>
 
   <!-- Footer -->
@@ -114,4 +116,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
