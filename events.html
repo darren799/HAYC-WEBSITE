@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBNFFM16M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0MBNFFM16M');
+  </script>
+
   <title>Events | Holly Acres Yacht Club</title>
+  <meta name="description" content="Explore upcoming events and on-the-water activities hosted by Holly Acres Yacht Club, including social gatherings, cruises, and community partnerships.">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +27,7 @@
         <img src="images/logo.png" alt="HAYC Logo" class="logo">
         <h1>Holly Acres Yacht Club</h1>
       </div>
-      <span class="hamburger">&#9776;</span>
+      <span class="hamburger" aria-label="Open navigation menu">&#9776;</span>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -36,27 +48,26 @@
 
   <!-- Events Hero -->
   <section class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
+    <div class="hero-text fade-in">
       <h2>Events & Activities</h2>
       <p>
-        From dockside gatherings to regional boat shows, our events bring the
-        boating community together on and off the water.
+        From dockside gatherings to on-the-water adventures, our events bring
+        the boating community together throughout the year.
       </p>
     </div>
   </section>
 
   <!-- Events Intro -->
-  <section class="events-intro">
+  <section class="events-intro fade-in">
     <p>
       Holly Acres Yacht Club hosts and partners on a variety of social,
-      educational, and on-the-water events throughout the year. Whether you’re
-      looking to connect, learn, or explore, there’s always something on the
-      calendar.
+      educational, and on-the-water events. Whether you’re looking to connect,
+      learn, or explore, there’s always something happening.
     </p>
   </section>
 
   <!-- Upcoming Events -->
-  <section class="events-content">
+  <section class="events-content slide-up">
     <h3>📅 Upcoming Events</h3>
 
     <div class="event-card">
@@ -79,7 +90,7 @@
   </section>
 
   <!-- Ongoing Activities -->
-  <section class="events-ongoing">
+  <section class="events-ongoing fade-in">
     <h3>⚓ Ongoing Club Activities</h3>
     <ul>
       <li>Dock parties, cookouts, and themed social gatherings</li>
@@ -91,11 +102,11 @@
   </section>
 
   <!-- Events CTA -->
-  <section class="events-cta">
+  <section class="events-cta fade-in">
     <h2>Be Part of the Action</h2>
     <p>
       Many events are free or discounted for members. Join now to enjoy
-      exclusive access and member-only experiences.
+      exclusive access and memorable experiences on and off the water.
     </p>
     <a href="signup.html" class="btn primary">Join the Club</a>
   </section>
