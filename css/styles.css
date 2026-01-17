@@ -70,3 +70,35 @@ footer { background:#003366; color:white; text-align:center; padding:10px; }
 /* Fade-in animation */
 section { opacity:0; animation:fadeIn 1s ease forwards; }
 @keyframes fadeIn { to { opacity:1; } }
+.fade-in, .slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible,
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.highlight-card span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: .5rem;
+}
