@@ -35,3 +35,20 @@ const nav = document.querySelector('nav');
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
+// ------------------------------------
+// Scroll Animations for Homepage
+// ------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const animated = document.querySelectorAll(".fade-in, .slide-up");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animated.forEach(el => observer.observe(el));
+});
