@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBNFFM16M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0MBNFFM16M');
+  </script>
+
   <title>Contact | Holly Acres Yacht Club</title>
-  <meta name="description" content="Contact Holly Acres Yacht Club for membership information, events, and marina details in Woodbridge, Virginia.">
+  <meta name="description" content="Contact Holly Acres Yacht Club for membership information, events, or marina details. We’d love to hear from you.">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -37,16 +48,17 @@
 
   <!-- Contact Hero -->
   <section class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text">
+    <div class="hero-text fade-in">
       <h2>Contact Us</h2>
       <p>
-        Have a question about membership, events, or partnerships? We’d love to hear from you.
+        Have questions about membership, events, or partnerships?
+        We’d love to hear from you.
       </p>
     </div>
   </section>
 
   <!-- Contact Info -->
-  <section class="contact-info">
+  <section class="contact-info fade-in">
     <h3>Get in Touch</h3>
     <p>
       Email:
@@ -59,7 +71,7 @@
   </section>
 
   <!-- Location & Map -->
-  <section class="contact-map">
+  <section class="contact-map slide-up">
     <h3>Our Marina Location</h3>
 
     <p class="address">
@@ -70,7 +82,7 @@
     <a
       href="https://www.google.com/maps/dir/?api=1&destination=1214+Swan+Point+Rd+Woodbridge+VA+22192"
       target="_blank"
-      class="btn"
+      class="btn primary"
     >
       Get Directions
     </a>
@@ -87,22 +99,36 @@
   </section>
 
   <!-- Contact Form -->
-  <section class="contact-form">
+  <section class="contact-form fade-in">
     <h3>Send a Message</h3>
+
     <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="HAYC Website Contact Message">
-      <input type="hidden" name="_next" value="https://darren799.github.io/HAYC-WEBSITE/thank-you.html">
+      <input type="hidden" name="_next" value="https://haycva.org/thank-you.html">
 
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      >
 
       <textarea
         name="message"
         placeholder="How can we help?"
-        required>
-      </textarea>
+        required
+      ></textarea>
 
-      <button type="submit" class="btn primary">Send Message</button>
+      <button type="submit" class="btn primary">
+        Send Message
+      </button>
     </form>
   </section>
 
@@ -113,6 +139,5 @@
 
   <!-- JavaScript -->
   <script src="js/script.js"></script>
-
 </body>
 </html>
