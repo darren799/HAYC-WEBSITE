@@ -354,3 +354,10 @@ footer {
     display: block;
   }
 }
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
