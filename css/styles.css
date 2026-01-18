@@ -420,3 +420,26 @@ footer {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+/* =========================
+   MEMBERSHIP → LOCAL SEO SPACING FIX (FINAL)
+========================= */
+
+/* Reduce bottom padding of membership section */
+.membership-content {
+  padding-bottom: 1.5rem;
+}
+
+/* Remove extra margin from last list in membership section */
+.membership-content ul:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Tighten top of Local SEO section */
+.local-seo {
+  padding-top: 1.5rem;
+}
+
+.local-seo h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
