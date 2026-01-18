@@ -390,3 +390,21 @@ footer {
 .events-cta .btn {
   display: inline-block;
 }
+/* =========================
+   MEMBERSHIP SECTION SPACING FIX
+========================= */
+
+.membership-content h3 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.membership-content h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.membership-content ul {
+  margin-bottom: 2rem;
+}
