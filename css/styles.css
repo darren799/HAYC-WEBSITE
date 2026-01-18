@@ -20,6 +20,15 @@ img {
   display: block;
 }
 
+/* Global paragraph spacing */
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
 /* =========================
    LINKS & BUTTONS
 ========================= */
@@ -48,7 +57,7 @@ a {
   background-color: #15537d;
 }
 
-/* Focus states (Accessibility) */
+/* Accessibility focus states */
 a:focus,
 button:focus,
 input:focus,
@@ -104,7 +113,7 @@ nav a.active {
 }
 
 /* =========================
-   HERO SECTIONS (FIXED)
+   HERO SECTIONS
 ========================= */
 
 .hero {
@@ -115,8 +124,8 @@ nav a.active {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
 }
 
 .hero::before {
@@ -144,13 +153,20 @@ nav a.active {
 }
 
 /* =========================
-   SECTIONS (GLOBAL)
+   GLOBAL SECTIONS
 ========================= */
 
 section {
   width: 100%;
 }
 
+/* Containment wrapper */
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Animations */
 .fade-in {
   animation: fadeIn 0.8s ease-in-out both;
 }
@@ -169,7 +185,7 @@ section {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Reduce motion (Accessibility) */
+/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -213,15 +229,10 @@ section {
   margin-bottom: 0.75rem;
 }
 
-/* Local SEO blocks */
-.local-seo {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* =========================
+   CTA SECTIONS
+========================= */
 
-/* CTA sections */
 .home-cta,
 .membership-cta,
 .events-cta,
@@ -239,38 +250,31 @@ section {
 }
 
 /* =========================
-   MEMBERSHIP / EVENTS / GALLERY
+   CONTENT SECTIONS (LEFT-ALIGNED BODY)
 ========================= */
 
-.membership-intro,
-.events-intro,
-.gallery-intro,
-.signup-intro,
-.contact-info {
+.home-intro,
+.membership-content,
+.events-content,
+.contact-info,
+.signup-intro {
   padding: 3rem 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+  text-align: left;
+}
+
+/* Center only section headings */
+.home-intro h2,
+.membership-intro h2,
+.events-intro h2,
+.contact-info h3 {
   text-align: center;
 }
 
-.membership-content,
-.events-content,
-.gallery-section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.membership-content h4,
-.events-content h4 {
-  margin-top: 2rem;
-}
-
-.membership-content ul,
-.events-ongoing ul {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
+/* =========================
+   EVENTS CARDS
+========================= */
 
 .event-card {
   background-color: #ffffff;
@@ -353,80 +357,9 @@ footer {
   .hamburger {
     display: block;
   }
-}
-p {
-  margin-bottom: 1.25rem;
-}
 
-p:last-child {
-  margin-bottom: 0;
-}
-.section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.home-intro,
-.membership-content,
-.events-content,
-.contact-info,
-.signup-intro {
-  text-align: left;
-}
-
-.home-intro h2,
-.home-highlights h2,
-.home-cta h2 {
-  text-align: center;
-}
-@media (max-width: 768px) {
   p {
     font-size: 1rem;
     line-height: 1.7;
   }
-}
-/* === GLOBAL TEXT ALIGNMENT RESET === */
-section {
-  text-align: left;
-}
-/* === INTENTIONAL CENTERING ONLY === */
-
-/* Hero is always centered */
-.hero,
-.hero-text {
-  text-align: center;
-}
-
-/* CTA sections */
-.home-cta,
-.membership-cta,
-.events-cta,
-.gallery-cta,
-.signup-cta {
-  text-align: center;
-}
-
-/* Section headings */
-.home-intro h2,
-.home-highlights h2,
-.membership-intro h2,
-.events-intro h2,
-.contact-info h3 {
-  text-align: center;
-}
-/* === FORCE LEFT ALIGNMENT FOR BODY COPY === */
-
-.home-intro p,
-.membership-content p,
-.events-content p,
-.contact-info p,
-.signup-intro p {
-  text-align: left;
-}
-/* =========================
-   OPTIONAL: LAYOUT CONTAINMENT
-========================= */
-
-.section-inner {
-  max-width: 900px;
-  margin: 0 auto;
 }
