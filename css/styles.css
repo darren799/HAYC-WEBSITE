@@ -408,3 +408,15 @@ footer {
 .membership-content ul {
   margin-bottom: 2rem;
 }
+/* =========================
+   MEMBERSHIP LOCAL SEO SPACING FIX
+========================= */
+
+.membership-content + .local-seo {
+  padding-top: 1.5rem;
+}
+
+.local-seo h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
