@@ -384,3 +384,7 @@ p:last-child {
     line-height: 1.7;
   }
 }
+/* === GLOBAL TEXT ALIGNMENT RESET === */
+section {
+  text-align: left;
+}
