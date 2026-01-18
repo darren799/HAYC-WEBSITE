@@ -413,3 +413,12 @@ section {
 .contact-info h3 {
   text-align: center;
 }
+/* === FORCE LEFT ALIGNMENT FOR BODY COPY === */
+
+.home-intro p,
+.membership-content p,
+.events-content p,
+.contact-info p,
+.signup-intro p {
+  text-align: left;
+}
