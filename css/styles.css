@@ -388,3 +388,28 @@ p:last-child {
 section {
   text-align: left;
 }
+/* === INTENTIONAL CENTERING ONLY === */
+
+/* Hero is always centered */
+.hero,
+.hero-text {
+  text-align: center;
+}
+
+/* CTA sections */
+.home-cta,
+.membership-cta,
+.events-cta,
+.gallery-cta,
+.signup-cta {
+  text-align: center;
+}
+
+/* Section headings */
+.home-intro h2,
+.home-highlights h2,
+.membership-intro h2,
+.events-intro h2,
+.contact-info h3 {
+  text-align: center;
+}
