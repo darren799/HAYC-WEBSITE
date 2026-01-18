@@ -524,3 +524,88 @@ footer {
     animation-delay: 0s;
   }
 }
+/* =========================
+   MEMBERSHIP PAGE – FINAL POLISH (ALL 3)
+========================= */
+
+/* 1️⃣ ADD SPACE + SUBTLE DIVIDER ABOVE INTRO */
+.membership-intro {
+  position: relative;
+  padding-top: 4rem;
+}
+
+.membership-intro::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #1f6fa8;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* 2️⃣ TYPOGRAPHY & SPACING REFINEMENT */
+.membership-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.membership-intro p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  text-align: left;
+}
+
+/* Membership section headline */
+.membership-content h3 {
+  font-size: 1.75rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Subsection headings */
+.membership-content h4 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Remove extra bottom gap before Local SEO */
+.membership-content {
+  padding-bottom: 1.5rem;
+}
+
+.membership-content ul:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 3️⃣ LOCAL SEO SPACING FIX */
+.local-seo {
+  padding-top: 1.5rem;
+}
+
+.local-seo h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* 4️⃣ STAGGERED FADE-IN (SUBTLE) */
+.membership-intro { animation-delay: 0.1s; }
+.membership-content { animation-delay: 0.2s; }
+.local-seo { animation-delay: 0.3s; }
+.membership-cta { animation-delay: 0.4s; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .membership-intro,
+  .membership-content,
+  .local-seo,
+  .membership-cta {
+    animation-delay: 0s;
+  }
+}
