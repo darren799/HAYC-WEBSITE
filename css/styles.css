@@ -363,3 +363,30 @@ footer {
     line-height: 1.7;
   }
 }
+/* =========================
+   CTA TEXT ALIGNMENT FIX
+========================= */
+
+/* Keep CTA headings centered */
+.home-cta h2,
+.membership-cta h2,
+.events-cta h2 {
+  text-align: center;
+}
+
+/* Left-align CTA body copy */
+.home-cta p,
+.membership-cta p,
+.events-cta p {
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep CTA buttons centered */
+.home-cta .btn,
+.membership-cta .btn,
+.events-cta .btn {
+  display: inline-block;
+}
