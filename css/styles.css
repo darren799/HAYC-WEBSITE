@@ -609,3 +609,20 @@ footer {
     animation-delay: 0s;
   }
 }
+/* =========================
+   GALLERY INTRO ALIGNMENT FIX
+========================= */
+
+.gallery-intro {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.gallery-intro .section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-intro p {
+  text-align: left;
+}
