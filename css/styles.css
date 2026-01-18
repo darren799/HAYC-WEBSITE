@@ -626,3 +626,20 @@ footer {
 .gallery-intro p {
   text-align: left;
 }
+/* =========================
+   GALLERY INTRO – HARD CONTAINMENT FIX
+========================= */
+
+.gallery-intro {
+  padding: 4rem 1.5rem;
+}
+
+.gallery-intro .section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-intro p {
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
