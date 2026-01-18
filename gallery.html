@@ -14,7 +14,7 @@
   </script>
 
   <title>Gallery | Holly Acres Yacht Club</title>
-  <meta name="description" content="Explore moments from events, gatherings, and life on the Occoquan River at Holly Acres Yacht Club in Woodbridge, VA.">
+  <meta name="description" content="View and share moments from events, gatherings, and life on the Occoquan River at Holly Acres Yacht Club in Woodbridge, VA.">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -53,47 +53,99 @@
   <div class="hero-text fade-in">
     <h2>Photo Gallery</h2>
     <p>
-      A look into the people, moments, and experiences that define
-      life at Holly Acres Yacht Club.
+      Moments, memories, and life on the water at Holly Acres Yacht Club.
     </p>
   </div>
 </section>
 
-<!-- ================= GALLERY INTRO ================= -->
+<!-- ================= INTRO ================= -->
 <section class="gallery-intro fade-in">
   <div class="section-inner">
     <p>
       The Holly Acres Yacht Club gallery highlights the people, events, and
       experiences that define life on the Occoquan River. From relaxed dockside
-      gatherings and casual cruises to seasonal traditions and shared moments
-      on the water, these snapshots reflect the welcoming spirit of our growing
-      boating community.
+      gatherings to group cruises and seasonal traditions, these moments reflect
+      the spirit of our growing boating community.
     </p>
 
     <p>
-      Holly Acres Yacht Club is built around connection — and the memories
-      captured here tell the story of friendships formed, experiences shared,
-      and time well spent at the marina and on the river.
-    </p>
-
-    <p>
-      As events continue and membership grows, this gallery will be updated with
-      photos shared by members and captured during club activities, showcasing
-      the lifestyle and community that make HAYC special.
+      As events continue and membership grows, this gallery will be updated
+      with photos shared by members and captured during club activities —
+      showcasing authentic moments and lasting memories.
     </p>
   </div>
 </section>
 
-<!-- ================= GALLERY BANNER ================= -->
+<!-- ================= BANNER ================= -->
 <section class="gallery-cta fade-in">
   <div class="section-inner">
     <h2>Let’s Create Some Great Photos Together</h2>
     <p>
-      Our best moments are just getting started. Join us at upcoming events,
-      cruises, and gatherings — and help create the memories that will continue
-      to shape the story of Holly Acres Yacht Club.
+      The best moments at Holly Acres Yacht Club happen naturally — on the dock,
+      out on the river, and during time spent with great people. Members are
+      encouraged to share photos that capture the spirit and experiences of the club.
     </p>
-    <a href="events.html" class="btn primary">View Upcoming Events</a>
+  </div>
+</section>
+
+<!-- ================= PHOTO SUBMISSION ================= -->
+<section class="gallery-submit fade-in">
+  <div class="section-inner">
+    <h3>Submit Your Photos</h3>
+    <p>
+      Have a photo from a club event, cruise, or day at the marina?
+      Submit it below for review. Approved photos may be featured in the
+      Holly Acres Yacht Club gallery.
+    </p>
+
+    <form
+      action="https://formsubmit.co/haycnva@gmail.com"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="return validateFileSize();"
+    >
+      <input type="hidden" name="_subject" value="HAYC Gallery Photo Submission">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://haycva.org/thank-you.html">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      >
+
+      <input
+        type="file"
+        name="photo"
+        accept="image/*"
+        required
+      >
+
+      <small>
+        Maximum file size: 10 MB. JPG or PNG recommended.
+      </small>
+
+      <textarea
+        name="message"
+        placeholder="Optional description (event, location, people pictured)"
+      ></textarea>
+
+      <button type="submit" class="btn primary">
+        Submit Photo for Review
+      </button>
+    </form>
+
+    <p style="font-size: 0.9rem; margin-top: 1rem;">
+      All submissions are reviewed by club administration prior to publication.
+    </p>
   </div>
 </section>
 
@@ -103,5 +155,20 @@
 </footer>
 
 <script src="js/script.js"></script>
+
+<!-- ================= FILE SIZE VALIDATION ================= -->
+<script>
+  function validateFileSize() {
+    const fileInput = document.querySelector('input[type="file"]');
+    const file = fileInput.files[0];
+
+    if (file && file.size > 10 * 1024 * 1024) {
+      alert("Please upload an image smaller than 10 MB.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
 </body>
 </html>
