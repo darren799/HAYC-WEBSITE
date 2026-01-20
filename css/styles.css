@@ -30,6 +30,18 @@ p:last-child {
 }
 
 /* =========================
+   BRAND COLORS
+========================= */
+
+:root {
+  --brand-primary: #1f6fa8;
+  --brand-primary-dark: #15537d;
+  --brand-accent: #0f4c81;
+  --brand-light: #eef5fb;
+  --brand-muted: #f9fafb;
+}
+
+/* =========================
    LINKS & BUTTONS
 ========================= */
 
@@ -43,14 +55,18 @@ a {
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   border-radius: 4px;
-  background-color: #1f6fa8;
+  background-color: var(--brand-primary);
   color: #ffffff;
   font-weight: bold;
   text-align: center;
 }
 
+.btn.primary {
+  background-color: var(--brand-primary);
+}
+
 .btn:hover {
-  background-color: #15537d;
+  background-color: var(--brand-primary-dark);
 }
 
 /* Accessibility focus */
@@ -58,7 +74,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid #005fcc;
+  outline: 2px solid var(--brand-primary);
   outline-offset: 3px;
 }
 
@@ -69,6 +85,8 @@ textarea:focus {
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -98,18 +116,18 @@ nav ul {
 
 nav a.active {
   font-weight: bold;
-  color: #1f6fa8;
+  color: var(--brand-primary);
 }
 
 /* Hamburger */
 .hamburger {
   display: none;
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   cursor: pointer;
 }
 
 /* =========================
-   HERO SECTIONS
+   HERO SECTION
 ========================= */
 
 .hero {
@@ -128,7 +146,7 @@ nav a.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -137,6 +155,12 @@ nav a.active {
   z-index: 2;
   max-width: 800px;
   color: #ffffff;
+}
+
+/* HERO LOGO (HOME ONLY) */
+.hero-logo {
+  max-width: 220px;
+  margin: 0 auto 1.5rem;
 }
 
 .hero-text h2 {
@@ -149,7 +173,7 @@ nav a.active {
 }
 
 /* =========================
-   GLOBAL LAYOUT
+   GLOBAL SECTIONS
 ========================= */
 
 section {
@@ -162,13 +186,16 @@ section {
   padding: 0 1.5rem;
 }
 
-/* Animations */
+/* =========================
+   ANIMATIONS
+========================= */
+
 .fade-in {
-  animation: fadeIn 0.8s ease both;
+  animation: fadeIn 0.8s ease-in-out both;
 }
 
 .slide-up {
-  animation: slideUp 0.8s ease both;
+  animation: slideUp 0.8s ease-in-out both;
 }
 
 @keyframes fadeIn {
@@ -199,18 +226,12 @@ section {
 
 .home-intro h2 {
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-.home-intro p {
-  max-width: 780px;
-  margin: 0 auto 1.25rem;
-  text-align: left;
+  color: var(--brand-accent);
 }
 
 .home-highlights {
-  padding: 4rem 1.5rem;
-  background-color: #f9fafb;
+  padding: 4rem 0;
+  background-color: var(--brand-muted);
   text-align: center;
 }
 
@@ -231,8 +252,8 @@ section {
 
 .highlight-card span {
   font-size: 2rem;
-  margin-bottom: 0.75rem;
   display: block;
+  margin-bottom: 0.75rem;
 }
 
 /* =========================
@@ -242,61 +263,51 @@ section {
 .home-cta,
 .membership-cta,
 .events-cta,
-.gallery-cta {
-  padding: 4rem 1.5rem;
-  background-color: #eef5fb;
+.gallery-cta,
+.signup-cta {
+  padding: 4rem 0;
+  background-color: var(--brand-light);
 }
 
 .home-cta h2,
 .membership-cta h2,
 .events-cta h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--brand-accent);
 }
 
 .home-cta p,
 .membership-cta p,
 .events-cta p {
-  max-width: 780px;
-  margin: 0 auto 1.25rem;
   text-align: left;
-}
-
-.home-cta .btn,
-.membership-cta .btn,
-.events-cta .btn {
-  display: block;
-  width: fit-content;
-  margin: 1.5rem auto 0;
+  max-width: 800px;
+  margin: 0 auto 1.25rem;
 }
 
 /* =========================
-   MEMBERSHIP PAGE
+   MEMBERSHIP / EVENTS / GALLERY
 ========================= */
 
-.membership-intro {
-  padding: 4rem 1.5rem 3rem;
+.membership-intro,
+.events-intro,
+.gallery-intro,
+.contact-info,
+.signup-intro {
+  padding: 4rem 0;
+}
+
+.membership-intro h2,
+.events-intro h2,
+.gallery-intro h2 {
   text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--brand-accent);
 }
 
-.membership-intro::before {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background-color: #1f6fa8;
-  margin: 0 auto 2rem;
-  display: block;
-  border-radius: 2px;
-}
-
-.membership-intro p {
-  max-width: 780px;
-  margin: 0 auto 1.25rem;
-  text-align: left;
-}
-
-.membership-content {
-  padding: 3rem 1.5rem 2rem;
+.membership-content,
+.events-content {
+  padding: 3rem 0;
 }
 
 .membership-content h3 {
@@ -313,32 +324,9 @@ section {
   padding-left: 1.5rem;
 }
 
-.local-seo {
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-
-.local-seo p {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: left;
-}
-
 /* =========================
-   EVENTS PAGE
+   EVENTS CARDS
 ========================= */
-
-.events-intro,
-.events-content,
-.events-ongoing {
-  padding: 3rem 1.5rem;
-}
-
-.events-intro p {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: left;
-}
 
 .event-card {
   background-color: #ffffff;
@@ -346,24 +334,6 @@ section {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================
-   GALLERY PAGE
-========================= */
-
-.gallery-intro {
-  padding: 4rem 1.5rem;
-}
-
-.gallery-intro p {
-  max-width: 780px;
-  margin: 0 auto 1.25rem;
-  text-align: left;
-}
-
-.gallery-submit {
-  padding: 4rem 1.5rem;
 }
 
 /* =========================
@@ -394,7 +364,7 @@ textarea {
 ========================= */
 
 .contact-map {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   text-align: center;
 }
 
@@ -411,14 +381,15 @@ footer {
   background-color: #1f2933;
   color: #ffffff;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
   margin-top: 3rem;
 }
 
 .site-attribution {
   font-size: 0.9rem;
   opacity: 0.85;
-  margin-top: 0.75rem;
+  max-width: 900px;
+  margin: 0.75rem auto 0;
 }
 
 /* =========================
@@ -441,6 +412,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
   nav ul {
     position: fixed;
     top: 0;
@@ -464,7 +440,11 @@ footer {
     font-size: 1.1rem;
   }
 
-  .hamburger {
-    display: block;
+  .hero-logo {
+    max-width: 170px;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
   }
 }
