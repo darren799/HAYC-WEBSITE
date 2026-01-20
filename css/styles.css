@@ -1,20 +1,20 @@
-/* =========================
-   BRAND TOKENS (HAYC)
-========================= */
+/* ======================================================
+   BRAND TOKENS (SINGLE SOURCE OF TRUTH)
+====================================================== */
 
 :root {
-  --brand-primary: #1f6fa8;        /* Logo blue */
-  --brand-primary-dark: #15537d;   /* Hover */
-  --brand-accent: #0f4c81;         /* Headings */
-  --brand-highlight: #4fa3d1;      /* Icons / accents */
-  --brand-navy: #1f2933;           /* Body text */
-  --brand-light: #eef5fb;          /* CTA backgrounds */
-  --brand-muted: #f9fafb;          /* Section backgrounds */
+  --brand-navy: #1f2933;
+  --brand-primary: #1f6fa8;
+  --brand-primary-dark: #15537d;
+  --brand-accent: #0f4c81;
+  --brand-highlight: #4fa3d1;
+  --brand-light: #eef5fb;
+  --brand-muted: #f9fafb;
 }
 
-/* =========================
+/* ======================================================
    RESET & BASE
-========================= */
+====================================================== */
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--brand-navy);
   background-color: #ffffff;
 }
@@ -34,6 +34,7 @@ img {
   display: block;
 }
 
+/* Typography spacing */
 p {
   margin-bottom: 1.25rem;
 }
@@ -42,18 +43,40 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* =========================
-   LINKS & BUTTONS
-========================= */
+/* ======================================================
+   LINKS & INTERACTION POLISH
+====================================================== */
 
 a {
+  color: inherit;
   text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Underline animation for body links only */
+.section-inner a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand-highlight);
+  transition: width 0.25s ease;
+}
+
+.section-inner a:not(.btn):hover::after {
+  width: 100%;
+}
+
+nav a:hover {
   color: var(--brand-primary);
 }
 
-a:hover {
-  color: var(--brand-primary-dark);
-}
+/* ======================================================
+   BUTTONS
+====================================================== */
 
 .btn {
   display: inline-block;
@@ -64,13 +87,15 @@ a:hover {
   color: #ffffff;
   font-weight: bold;
   text-align: center;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .btn:hover {
   background-color: var(--brand-primary-dark);
+  transform: translateY(-1px);
 }
 
-/* Accessibility */
+/* Accessibility focus */
 a:focus,
 button:focus,
 input:focus,
@@ -79,9 +104,9 @@ textarea:focus {
   outline-offset: 3px;
 }
 
-/* =========================
+/* ======================================================
    HEADER & NAVIGATION
-========================= */
+====================================================== */
 
 header {
   background-color: #ffffff;
@@ -93,7 +118,7 @@ header {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,10 +140,6 @@ nav ul {
   gap: 1.5rem;
 }
 
-nav a {
-  color: var(--brand-navy);
-}
-
 nav a.active {
   font-weight: bold;
   color: var(--brand-primary);
@@ -129,12 +150,11 @@ nav a.active {
   display: none;
   font-size: 1.9rem;
   cursor: pointer;
-  color: var(--brand-primary);
 }
 
-/* =========================
+/* ======================================================
    HERO
-========================= */
+====================================================== */
 
 .hero {
   position: relative;
@@ -159,12 +179,12 @@ nav a.active {
 .hero-text {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 800px;
   color: #ffffff;
 }
 
 .hero-logo {
-  max-width: 240px;
+  max-width: 220px;
   margin: 0 auto 1.5rem;
 }
 
@@ -177,9 +197,9 @@ nav a.active {
   font-size: 1.1rem;
 }
 
-/* =========================
+/* ======================================================
    GLOBAL SECTIONS
-========================= */
+====================================================== */
 
 section {
   width: 100%;
@@ -191,9 +211,9 @@ section {
   padding: 0 1.5rem;
 }
 
-/* =========================
+/* ======================================================
    ANIMATIONS
-========================= */
+====================================================== */
 
 .fade-in {
   animation: fadeIn 0.8s ease-in-out both;
@@ -213,9 +233,16 @@ section {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* =========================
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ======================================================
    HOME PAGE
-========================= */
+====================================================== */
 
 .home-intro {
   padding: 4rem 0;
@@ -237,7 +264,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   max-width: 1100px;
-  margin: 2.5rem auto 0;
+  margin: 2rem auto 0;
 }
 
 .highlight-card {
@@ -247,16 +274,9 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.highlight-card span {
-  font-size: 2rem;
-  color: var(--brand-highlight);
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-/* =========================
+/* ======================================================
    CTA SECTIONS
-========================= */
+====================================================== */
 
 .home-cta,
 .membership-cta,
@@ -283,61 +303,12 @@ section {
   text-align: left;
 }
 
-/* =========================
-   CONTENT PAGES
-========================= */
-
-.membership-intro,
-.events-intro,
-.gallery-intro,
-.contact-info,
-.signup-intro {
-  padding: 4rem 0;
-}
-
-.membership-intro h2,
-.events-intro h2,
-.gallery-intro h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--brand-accent);
-}
-
-.membership-content,
-.events-content {
-  padding: 3rem 0;
-}
-
-.membership-content h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--brand-accent);
-}
-
-.membership-content h4 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--brand-primary);
-}
-
-/* =========================
-   EVENT CARDS
-========================= */
-
-.event-card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================
+/* ======================================================
    FORMS
-========================= */
+====================================================== */
 
 form {
-  max-width: 620px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -356,23 +327,9 @@ textarea {
   min-height: 120px;
 }
 
-/* =========================
-   MAP
-========================= */
-
-.contact-map {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.contact-map iframe {
-  margin-top: 1rem;
-  border-radius: 8px;
-}
-
-/* =========================
+/* ======================================================
    FOOTER
-========================= */
+====================================================== */
 
 footer {
   background-color: var(--brand-navy);
@@ -389,9 +346,18 @@ footer {
   margin: 0.75rem auto 0;
 }
 
-/* =========================
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--brand-highlight);
+}
+
+/* ======================================================
    MOBILE NAVIGATION
-========================= */
+====================================================== */
 
 .nav-overlay {
   position: fixed;
@@ -409,7 +375,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   .hamburger {
     display: block;
   }
@@ -438,7 +403,7 @@ footer {
   }
 
   .hero-logo {
-    max-width: 180px;
+    max-width: 170px;
   }
 
   .hero-text h2 {
