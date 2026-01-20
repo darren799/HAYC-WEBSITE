@@ -49,15 +49,11 @@ a {
   text-align: center;
 }
 
-.btn.primary {
-  background-color: #1f6fa8;
-}
-
 .btn:hover {
   background-color: #15537d;
 }
 
-/* Accessibility focus states */
+/* Accessibility focus */
 a:focus,
 button:focus,
 input:focus,
@@ -105,7 +101,7 @@ nav a.active {
   color: #1f6fa8;
 }
 
-/* Hamburger (mobile) */
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 1.75rem;
@@ -153,26 +149,26 @@ nav a.active {
 }
 
 /* =========================
-   GLOBAL SECTIONS
+   GLOBAL LAYOUT
 ========================= */
 
 section {
   width: 100%;
 }
 
-/* Containment wrapper */
 .section-inner {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* Animations */
 .fade-in {
-  animation: fadeIn 0.8s ease-in-out both;
+  animation: fadeIn 0.8s ease both;
 }
 
 .slide-up {
-  animation: slideUp 0.8s ease-in-out both;
+  animation: slideUp 0.8s ease both;
 }
 
 @keyframes fadeIn {
@@ -185,7 +181,7 @@ section {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Reduced motion accessibility */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -194,18 +190,28 @@ section {
 }
 
 /* =========================
-   HOME PAGE SECTIONS
+   HOME PAGE
 ========================= */
+
+.home-intro {
+  padding: 4rem 0;
+}
+
+.home-intro h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-intro p {
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  text-align: left;
+}
 
 .home-highlights {
   padding: 4rem 1.5rem;
-  margin-top: 2rem;
   background-color: #f9fafb;
   text-align: center;
-}
-
-.home-highlights h2 {
-  margin-bottom: 2rem;
 }
 
 .highlight-cards {
@@ -213,7 +219,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
 
 .highlight-card {
@@ -225,8 +231,8 @@ section {
 
 .highlight-card span {
   font-size: 2rem;
-  display: block;
   margin-bottom: 0.75rem;
+  display: block;
 }
 
 /* =========================
@@ -236,45 +242,103 @@ section {
 .home-cta,
 .membership-cta,
 .events-cta,
-.gallery-cta,
-.signup-cta {
+.gallery-cta {
   padding: 4rem 1.5rem;
   background-color: #eef5fb;
-  text-align: center;
 }
 
 .home-cta h2,
 .membership-cta h2,
 .events-cta h2 {
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.home-cta p,
+.membership-cta p,
+.events-cta p {
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  text-align: left;
+}
+
+.home-cta .btn,
+.membership-cta .btn,
+.events-cta .btn {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
 }
 
 /* =========================
-   CONTENT SECTIONS (LEFT-ALIGNED BODY)
+   MEMBERSHIP PAGE
 ========================= */
 
-.home-intro,
-.membership-content,
-.events-content,
-.contact-info,
-.signup-intro {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
+.membership-intro {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.membership-intro::before {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #1f6fa8;
+  margin: 0 auto 2rem;
+  display: block;
+  border-radius: 2px;
+}
+
+.membership-intro p {
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  text-align: left;
+}
+
+.membership-content {
+  padding: 3rem 1.5rem 2rem;
+}
+
+.membership-content h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.membership-content h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.membership-content ul {
+  padding-left: 1.5rem;
+}
+
+.local-seo {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.local-seo p {
+  max-width: 780px;
   margin: 0 auto;
   text-align: left;
 }
 
-/* Center only section headings */
-.home-intro h2,
-.membership-intro h2,
-.events-intro h2,
-.contact-info h3 {
-  text-align: center;
+/* =========================
+   EVENTS PAGE
+========================= */
+
+.events-intro,
+.events-content,
+.events-ongoing {
+  padding: 3rem 1.5rem;
 }
 
-/* =========================
-   EVENTS CARDS
-========================= */
+.events-intro p {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: left;
+}
 
 .event-card {
   background-color: #ffffff;
@@ -282,6 +346,24 @@ section {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.gallery-intro {
+  padding: 4rem 1.5rem;
+}
+
+.gallery-intro p {
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+  text-align: left;
+}
+
+.gallery-submit {
+  padding: 4rem 1.5rem;
 }
 
 /* =========================
@@ -333,318 +415,14 @@ footer {
   margin-top: 3rem;
 }
 
+.site-attribution {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.75rem;
+}
+
 /* =========================
    MOBILE NAVIGATION
-========================= */
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: #ffffff;
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-}
-/* =========================
-   CTA TEXT ALIGNMENT FIX
-========================= */
-
-/* Keep CTA headings centered */
-.home-cta h2,
-.membership-cta h2,
-.events-cta h2 {
-  text-align: center;
-}
-
-/* Left-align CTA body copy */
-.home-cta p,
-.membership-cta p,
-.events-cta p {
-  text-align: left;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Keep CTA buttons centered */
-.home-cta .btn,
-.membership-cta .btn,
-.events-cta .btn {
-  display: inline-block;
-}
-/* =========================
-   MEMBERSHIP SECTION SPACING FIX
-========================= */
-
-.membership-content h3 {
-  margin-bottom: 2rem;
-  margin-top: 0;
-  text-align: center;
-}
-
-.membership-content h4 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.membership-content ul {
-  margin-bottom: 2rem;
-}
-/* =========================
-   MEMBERSHIP LOCAL SEO SPACING FIX
-========================= */
-
-.membership-content + .local-seo {
-  padding-top: 1.5rem;
-}
-
-.local-seo h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-/* =========================
-   MEMBERSHIP → LOCAL SEO SPACING FIX (FINAL)
-========================= */
-
-/* Reduce bottom padding of membership section */
-.membership-content {
-  padding-bottom: 1.5rem;
-}
-
-/* Remove extra margin from last list in membership section */
-.membership-content ul:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Tighten top of Local SEO section */
-.local-seo {
-  padding-top: 1.5rem;
-}
-
-.local-seo h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-/* =========================
-   MEMBERSHIP INTRO HEADING SPACING
-========================= */
-
-.membership-intro h2 {
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-/* =========================
-   MEMBERSHIP PAGE – FINAL POLISH
-========================= */
-
-/* 1️⃣ SUBTLE DIVIDER BETWEEN HERO & INTRO */
-.membership-intro {
-  position: relative;
-  padding-top: 4rem;
-}
-
-.membership-intro::before {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #1f6fa8;
-  margin: 0 auto 2rem;
-  border-radius: 2px;
-  opacity: 0.8;
-}
-
-/* 2️⃣ TYPOGRAPHY SCALE POLISH */
-.membership-intro h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-.membership-intro p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Section headline inside membership content */
-.membership-content h3 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-/* Subsection headings */
-.membership-content h4 {
-  font-size: 1.25rem;
-}
-
-/* 3️⃣ STAGGERED FADE-IN (SUBTLE & CLASSY) */
-.membership-intro {
-  animation-delay: 0.1s;
-}
-
-.membership-content {
-  animation-delay: 0.2s;
-}
-
-.local-seo {
-  animation-delay: 0.3s;
-}
-
-.membership-cta {
-  animation-delay: 0.4s;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .membership-intro,
-  .membership-content,
-  .local-seo,
-  .membership-cta {
-    animation-delay: 0s;
-  }
-}
-/* =========================
-   MEMBERSHIP PAGE – FINAL POLISH (ALL 3)
-========================= */
-
-/* 1️⃣ ADD SPACE + SUBTLE DIVIDER ABOVE INTRO */
-.membership-intro {
-  position: relative;
-  padding-top: 4rem;
-}
-
-.membership-intro::before {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #1f6fa8;
-  margin: 0 auto 2rem;
-  border-radius: 2px;
-  opacity: 0.8;
-}
-
-/* 2️⃣ TYPOGRAPHY & SPACING REFINEMENT */
-.membership-intro h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.membership-intro p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  max-width: 780px;
-  margin: 0 auto 1.25rem;
-  text-align: left;
-}
-
-/* Membership section headline */
-.membership-content h3 {
-  font-size: 1.75rem;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-/* Subsection headings */
-.membership-content h4 {
-  font-size: 1.25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* Remove extra bottom gap before Local SEO */
-.membership-content {
-  padding-bottom: 1.5rem;
-}
-
-.membership-content ul:last-of-type {
-  margin-bottom: 0;
-}
-
-/* 3️⃣ LOCAL SEO SPACING FIX */
-.local-seo {
-  padding-top: 1.5rem;
-}
-
-.local-seo h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* 4️⃣ STAGGERED FADE-IN (SUBTLE) */
-.membership-intro { animation-delay: 0.1s; }
-.membership-content { animation-delay: 0.2s; }
-.local-seo { animation-delay: 0.3s; }
-.membership-cta { animation-delay: 0.4s; }
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .membership-intro,
-  .membership-content,
-  .local-seo,
-  .membership-cta {
-    animation-delay: 0s;
-  }
-}
-/* =========================
-   GALLERY INTRO ALIGNMENT FIX
-========================= */
-
-.gallery-intro {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-}
-
-.gallery-intro .section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.gallery-intro p {
-  text-align: left;
-}
-/* =========================
-   GALLERY INTRO – HARD CONTAINMENT FIX
-========================= */
-
-.gallery-intro {
-  padding: 4rem 1.5rem;
-}
-
-.gallery-intro .section-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.gallery-intro p {
-  text-align: left;
-  margin-bottom: 1.25rem;
-}
-/* =========================
-   MOBILE NAV OVERLAY
 ========================= */
 
 .nav-overlay {
@@ -661,10 +439,6 @@ footer {
   opacity: 1;
   pointer-events: all;
 }
-
-/* =========================
-   MOBILE NAV SLIDE-IN
-========================= */
 
 @media (max-width: 768px) {
   nav ul {
@@ -688,5 +462,9 @@ footer {
 
   nav ul li a {
     font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
