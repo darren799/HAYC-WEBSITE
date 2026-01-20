@@ -52,9 +52,7 @@
 <section class="hero" style="background-image: url('images/hero-marina.png');">
   <div class="hero-text fade-in">
     <h2>Photo Gallery</h2>
-    <p>
-      Moments, memories, and life on the water at Holly Acres Yacht Club.
-    </p>
+    <p>Moments, memories, and life on the water at Holly Acres Yacht Club.</p>
   </div>
 </section>
 
@@ -69,9 +67,9 @@
     </p>
 
     <p>
-      As events continue and membership grows, this gallery will be updated
-      with photos shared by members and captured during club activities —
-      showcasing authentic moments and lasting memories.
+      As events continue and membership grows, this gallery will be updated with
+      photos shared by members and captured during club activities — showcasing
+      authentic moments and lasting memories.
     </p>
   </div>
 </section>
@@ -92,6 +90,7 @@
 <section class="gallery-submit fade-in">
   <div class="section-inner">
     <h3>Submit Your Photos</h3>
+
     <p>
       Have a photo from a club event, cruise, or day at the marina?
       Submit it below for review. Approved photos may be featured in the
@@ -108,30 +107,12 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://haycva.org/thank-you.html">
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-      >
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-      >
+      <input type="file" name="photo" accept="image/*" required>
 
-      <input
-        type="file"
-        name="photo"
-        accept="image/*"
-        required
-      >
-
-      <small>
-        Maximum file size: 10 MB. JPG or PNG recommended.
-      </small>
+      <small>Maximum file size: 10 MB. JPG or PNG recommended.</small>
 
       <textarea
         name="message"
@@ -149,7 +130,7 @@
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>&copy; 2026 Holly Acres Yacht Club</p>
 
@@ -173,6 +154,9 @@
     return true;
   }
 </script>
+
+<!-- ================= GLOBAL JS ================= -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
