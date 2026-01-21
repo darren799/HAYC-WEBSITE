@@ -410,3 +410,28 @@ footer a:hover {
     font-size: 2rem;
   }
 }
+/* =========================
+   MEMBERSHIP PAGE SPACING POLISH
+========================= */
+
+.membership-intro {
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.membership-content {
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.membership-content h3 {
+  margin-bottom: 2rem;
+}
+
+.membership-content h4 {
+  margin-top: 2.25rem;
+}
+
+.membership-cta {
+  padding-top: 3.5rem;
+}
