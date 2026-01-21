@@ -13,106 +13,202 @@
     gtag('config', 'G-0MBNFFM16M');
   </script>
 
-  <title>Signup | Holly Acres Yacht Club</title>
-  <meta name="description" content="Express your interest in joining Holly Acres Yacht Club and become part of a welcoming boating community on the Occoquan River.">
+  <title>Membership Interest | Holly Acres Yacht Club</title>
+  <meta name="description" content="Submit your membership interest to join Holly Acres Yacht Club in Woodbridge, VA. Connect with a welcoming boating community on the Occoquan River.">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Header + Navigation -->
-  <header>
-    <div class="nav-container">
-      <div class="logo-container">
-        <img src="images/logo.png" alt="HAYC Logo" class="logo">
-        <h1>Holly Acres Yacht Club</h1>
-      </div>
-      <span class="hamburger" aria-label="Open navigation menu">&#9776;</span>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="membership.html">Membership</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="signup.html" class="active">Signup</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="https://richardproductionsllc.myshopify.com/collections/hayc" target="_blank">
-              Store
-            </a>
-          </li>
-        </ul>
-      </nav>
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav-container">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Holly Acres Yacht Club Logo" class="logo">
+      <h1>Holly Acres Yacht Club</h1>
     </div>
-  </header>
 
-  <!-- Signup Hero -->
-  <section class="hero" style="background-image: url('images/hero-marina.png');">
-    <div class="hero-text fade-in">
-      <h2>Join Holly Acres Yacht Club</h2>
-      <p>
-        Take the first step toward becoming part of a friendly, growing boating
-        community on the Occoquan River.
-      </p>
-    </div>
-  </section>
+    <span class="hamburger" aria-label="Open navigation menu">&#9776;</span>
 
-  <!-- Signup Intro -->
-  <section class="signup-intro fade-in">
-    <h2>Membership Interest Form</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="signup.html" class="active">Signup</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="https://richardproductionsllc.myshopify.com/collections/hayc" target="_blank">
+            Store
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="background-image: url('images/hero-marina.png');">
+  <div class="hero-text fade-in">
+    <h2>Membership Interest</h2>
     <p>
-      Whether you’re an experienced boater or simply looking for a more social
-      marina experience, we’d love to hear from you. Complete the form below and
-      a member of our team will be in touch.
+      Take the first step toward becoming part of the Holly Acres Yacht Club
+      boating community.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- Signup Form -->
-  <section class="signup-form slide-up">
-    <form action="https://formsubmit.co/haycnva@gmail.com" method="POST">
+<!-- ================= INTRO ================= -->
+<section class="signup-intro fade-in">
+  <div class="section-inner">
+    <p>
+      This form helps us learn more about you, your boating interests, and how
+      you’d like to be involved with Holly Acres Yacht Club. Submitting this
+      form does not obligate you to join — it simply allows our team to follow
+      up with the most relevant information.
+    </p>
+  </div>
+</section>
 
-      <input type="hidden" name="_subject" value="New HAYC Membership Inquiry">
+<!-- ================= SIGNUP FORM ================= -->
+<section class="signup-form slide-up">
+  <div class="section-inner">
+
+    <form
+      action="https://formsubmit.co/haycnva@gmail.com"
+      method="POST"
+    >
+      <!-- FormSubmit Settings -->
+      <input type="hidden" name="_subject" value="HAYC Membership Interest Submission">
+      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://haycva.org/thank-you.html">
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Full Name"
-        required
-      >
+      <!-- ================= CONTACT INFO ================= -->
+      <fieldset>
+        <legend>Contact Information</legend>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          required
+        >
 
-      <textarea
-        name="message"
-        placeholder="Tell us a little about your boating experience or interest in joining (optional)"
-      ></textarea>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+        >
+
+        <input
+          type="text"
+          name="zip_code"
+          placeholder="ZIP Code"
+        >
+      </fieldset>
+
+      <!-- ================= MEMBERSHIP PREFERENCE ================= -->
+      <fieldset>
+        <legend>Membership Preferences</legend>
+
+        <select name="membership_type">
+          <option value="">Preferred Membership Type</option>
+          <option>Social</option>
+          <option>Full</option>
+          <option>Family</option>
+          <option>Junior</option>
+          <option>Not Sure Yet</option>
+        </select>
+      </fieldset>
+
+      <!-- ================= BOATING EXPERIENCE ================= -->
+      <fieldset>
+        <legend>Boating Experience</legend>
+
+        <select name="boat_owner">
+          <option value="">Do you currently own a boat?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <input
+          type="text"
+          name="experience_years"
+          placeholder="Years of Boating Experience (optional)"
+        >
+
+        <input
+          type="text"
+          name="experience_type"
+          placeholder="Power, Sail, or Both (optional)"
+        >
+      </fieldset>
+
+      <!-- ================= VESSEL INFORMATION ================= -->
+      <fieldset>
+        <legend>Vessel Information (Optional)</legend>
+
+        <input
+          type="text"
+          name="vessel_name"
+          placeholder="Vessel Name"
+        >
+
+        <input
+          type="text"
+          name="vessel_type"
+          placeholder="Vessel Type"
+        >
+
+        <input
+          type="text"
+          name="vessel_length"
+          placeholder="Vessel Length (ft)"
+        >
+
+        <textarea
+          name="mooring_needs"
+          placeholder="Slip or Mooring Needs"
+        ></textarea>
+      </fieldset>
+
+      <!-- ================= ADDITIONAL NOTES ================= -->
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <textarea
+          name="message"
+          placeholder="Anything you'd like us to know?"
+        ></textarea>
+      </fieldset>
 
       <button type="submit" class="btn primary">
-        Submit Interest
+        Submit Membership Interest
       </button>
+
     </form>
-  </section>
+  </div>
+</section>
 
-  <!-- Signup CTA -->
-  <section class="signup-cta fade-in">
-    <p>
-      Membership is currently open, and this is a great time to get involved
-      while the club continues to grow.
-    </p>
-  </section>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>&copy; 2026 Holly Acres Yacht Club</p>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Holly Acres Yacht Club</p>
-  </footer>
+  <p class="site-attribution">
+    Holly Acres Yacht Club is hosted by Holly Acres Marine on the Water and was
+    established through a collaborative partnership with Holly Acres, the DMV
+    Boat Owners Association, WeFish2, and other community contributors.
+  </p>
+</footer>
 
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
