@@ -435,3 +435,30 @@ footer a:hover {
 .membership-cta {
   padding-top: 3.5rem;
 }
+/* =========================
+   SIGNUP / MEMBERSHIP INTEREST PAGE SPACING
+========================= */
+
+.signup-intro {
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Decorative divider */
+.signup-intro::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--brand-primary);
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.signup-intro p {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
